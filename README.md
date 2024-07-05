@@ -1,4 +1,4 @@
-### GitHub Repository Description
+### Repository Description
 
 ---
 
