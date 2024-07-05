@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Notes</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Collaborative Notes</h1>
+      </header>
+      <form id="noteForm" hx-post="/add-note" hx-target="#notes" hx-swap="beforeend">
+        <input type="text" id="noteTitle" name="title" placeholder="Note Title" required>
+        <textarea id="noteContent" name="content" rows="4" placeholder="Note Content" required></textarea>
+        <button type="submit">Add Note</button>
+      </form>
+      <div id="notes" class="notes">
+        <!-- Notes will be dynamically added here -->
+      </div>
+    </div>
+  </body>
+</html>
